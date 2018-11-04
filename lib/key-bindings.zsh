@@ -91,3 +91,5 @@ bindkey "^[m" copy-prev-shell-word
 ## Fix weird sequence that rxvt produces
 #bindkey -s '^[[Z' '\t'
 #
+bindkey '^H' backward-kill-word
+bindkey '\e[3;5~' kill-word
