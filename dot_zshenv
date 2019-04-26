@@ -1,4 +1,4 @@
-
-export LESS="-F -M -X $LESS"
+export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+export LESS="-R -F -M -X $LESS"
 
 export PATH="/usr/lib/ccache/bin/:$PATH"
