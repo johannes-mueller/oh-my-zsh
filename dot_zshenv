@@ -1,0 +1,4 @@
+
+export LESS="-F -M -X $LESS"
+
+export PATH="/usr/lib/ccache/bin/:$PATH"
