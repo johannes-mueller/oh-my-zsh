@@ -10,7 +10,7 @@ rbenv_version() {
 
 PROMPT='
 %(?.${fg[green]}✔.${fg[red]}✘ [%?]) %{$fg_bold[blue]%}${PWD/#$HOME/~}
-%{$fg_bold[green]%}${HOST}%{$reset_color%}$(git_prompt_info) ⌚ %{$fg_bold[red]%}%*%{$reset_color%} $ '
+%{$fg_bold[green]%}${HOST}%{$reset_color%}$(git_prompt_info) ⌚ %{$fg_bold[red]%}%*%{$reset_color%} <%j> $ '
 
 # Must use Powerline font, for \uE0A0 to render.
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[magenta]%}\uE0A0 "
