@@ -110,3 +110,5 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=3
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source /home/joh/.fzf.zsh
+
+alias git='nocorrect git'
