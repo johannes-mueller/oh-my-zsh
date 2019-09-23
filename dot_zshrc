@@ -68,6 +68,7 @@ plugins=(
   cargo
   rust
   zsh-autosuggestions
+  zsh-syntax-highlighting
   dircycle
   ssh-agent
   fd
@@ -76,6 +77,14 @@ plugins=(
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 source $ZSH/oh-my-zsh.sh
+
+if [ -e $HOME/.fzf.zsh ]
+then
+    source $HOME/.fzf.zsh
+else
+    source /usr/share/fzf/key-bindings.zsh
+    source /usr/share/fzf/completion.zsh
+fi
 
 bindkey "^T" transpose-chars
 bindkey "^F" fzf-file-widget
@@ -109,6 +118,5 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=3
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /home/joh/.fzf.zsh
 
 alias git='nocorrect git'
