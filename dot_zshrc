@@ -8,7 +8,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="johmue"
-
+#
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -78,13 +78,15 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 source $ZSH/oh-my-zsh.sh
 
-if [ -e $HOME/.fzf.zsh ]
+if [ `sed 's/^ID=//p;d' /etc/os-release` = arch ]
 then
-    source $HOME/.fzf.zsh
-else
     source /usr/share/fzf/key-bindings.zsh
     source /usr/share/fzf/completion.zsh
+else
+    source /usr/share/zsh/vendor-completions/_fzf
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
 fi
+
 
 bindkey "^T" transpose-chars
 bindkey "^F" fzf-file-widget
