@@ -1,7 +1,7 @@
+export VISUAL=vi
+export EDITOR=vi
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS="-R -F -M -X $LESS"
-
-export PATH="/usr/lib/ccache/bin/:$PATH"
 
 if [ -e "$HOME/.zshenv.local" ] ; then
 	source "$HOME/.zshenv.local"
