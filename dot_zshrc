@@ -130,7 +130,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=3
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source johmue_aliases.zsh
+source johmue.aliases.zsh
 alias git='nocorrect git'
 
 
