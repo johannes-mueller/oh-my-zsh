@@ -41,4 +41,4 @@ ealias scss="sudo systemctl status"
 bindkey " " expand-ealias-space
 
 
-alias gr="cd `git rev-parse --show-toplevel`"
+alias gr='cd `git rev-parse --show-toplevel`'
