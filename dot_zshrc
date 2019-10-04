@@ -70,7 +70,6 @@ plugins=(
   pip
   python
   rust
-  ssh-agent
   sudo
   systemd
   z
