@@ -63,13 +63,11 @@ ZSH_DISABLE_COMPFIX=true
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   cargo
-  conda-zsh-completion
   dirhistory
   exa
   fd
   pip
   python
-  rust
   ssh-agent
   sudo
   systemd
