@@ -42,3 +42,6 @@ bindkey " " expand-ealias-space
 
 
 alias gr='cd `git rev-parse --show-toplevel`'
+alias gs='git status'
+alias gl='git glog'
+alias gd='git diff'
