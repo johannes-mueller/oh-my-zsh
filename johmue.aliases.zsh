@@ -31,7 +31,10 @@ expand-ealias-space() {
 }
 zle -N expand-ealias-space
 
-ealiasnw afu="sudo apt full-up"
+alias afu="sudo apt full-upgrade"
+alias apu="sudo apt update"
+ealias api="sudo apt install"
+ealias apr="sudo apt remove"
 
 ealias scrs="sudo systemctl restart"
 ealias scst="sudo systemctl start"
