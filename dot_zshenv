@@ -1,6 +1,6 @@
 export VISUAL=vi
 export EDITOR=vi
-export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+export LESSOPEN="| source-highlight --failsafe  -f esc -v -i %s"
 export LESS="-R -F -M -X $LESS"
 
 if [ -e "$HOME/.zshenv.local" ] ; then
