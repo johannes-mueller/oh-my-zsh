@@ -31,14 +31,22 @@ expand-ealias-space() {
 }
 zle -N expand-ealias-space
 
-ealiasnw afu="sudo apt full-up"
-
-ealias scrs="sudo systemctl restart"
-ealias scst="sudo systemctl start"
-ealias scst="sudo syscemctl stop"
-ealias scss="sudo systemctl status"
-
 bindkey " " expand-ealias-space
 
 
+alias afu="sudo apt full-upgrade"
+alias apu="sudo apt update"
+ealias api="sudo apt install"
+ealias apr="sudo apt remove"
+
+
+ealias scrs="sudo systemctl restart"
+ealias scst="sudo systemctl start"
+ealias scsp="sudo syscemctl stop"
+ealias scss="sudo systemctl status"
+
+
 alias gr='cd `git rev-parse --show-toplevel`'
+alias gs='git status'
+alias gl='git glog'
+alias gd='git diff'
