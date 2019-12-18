@@ -67,6 +67,7 @@ plugins=(
   dirhistory
   exa
   fd
+  pass
   pip
   python
   rust
