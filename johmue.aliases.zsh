@@ -50,3 +50,5 @@ alias gr='cd `git rev-parse --show-toplevel`'
 alias gs='git status'
 alias gl='git glog'
 alias gd='git diff'
+
+alias gitus='LANG=en_US.UTF-8 git'
