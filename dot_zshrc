@@ -66,6 +66,7 @@ plugins=(
   dirhistory
   exa
   fd
+  pass
   pip
   python
   rust
@@ -91,6 +92,8 @@ else
     source /usr/share/zsh/vendor-completions/_fzf
     source /usr/share/doc/fzf/examples/key-bindings.zsh
 fi
+
+source $ZSH/fzf_options.zsh
 
 export FZF_COMPLETION_TRIGGER=''
 bindkey '^[t' fzf-completion
