@@ -65,7 +65,6 @@ plugins=(
   cargo
   conda-zsh-completion
   dirhistory
-  exa
   fd
   pass
   pip
