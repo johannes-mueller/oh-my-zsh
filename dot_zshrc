@@ -89,7 +89,6 @@ then
     source /usr/share/fzf/key-bindings.zsh
     source /usr/share/fzf/completion.zsh
 else
-    source /usr/share/zsh/vendor-completions/_fzf
     source /usr/share/doc/fzf/examples/key-bindings.zsh
 fi
 
