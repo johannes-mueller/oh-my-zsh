@@ -66,6 +66,7 @@ plugins=(
   conda-zsh-completion
   dirhistory
   fd
+  fzf
   pass
   pip
   python
@@ -83,20 +84,6 @@ zstyle ':completion::complete:*' use-cache 1
 zstyle ":conda_zsh_completion:*" use-groups true
 
 source $ZSH/oh-my-zsh.sh
-
-if [ `sed 's/^ID=//p;d' /etc/os-release` = arch ]
-then
-    source /usr/share/fzf/key-bindings.zsh
-    source /usr/share/fzf/completion.zsh
-else
-    source /usr/share/doc/fzf/examples/key-bindings.zsh
-fi
-
-source $ZSH/fzf_options.zsh
-
-export FZF_COMPLETION_TRIGGER=''
-bindkey '^[t' fzf-completion
-bindkey '^I' $fzf_default_completion
 
 bindkey "^T" transpose-chars
 bindkey "^F" fzf-file-widget
@@ -133,5 +120,3 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=3
 
 source $ZSH/johmue.aliases.zsh
 alias git='nocorrect git'
-
-
