@@ -62,7 +62,8 @@ local ret=0
 # Update Oh My Zsh
 printf "${BLUE}%s${RESET}\n" "Updating Oh My Zsh"
 last_commit=$(git rev-parse HEAD)
-if git pull --stat origin master; then
+git fetch origin
+if git merge origin/master; then
   # Check if it was really updated or not
   if [[ "$(git rev-parse HEAD)" = "$last_commit" ]]; then
     message="Oh My Zsh is already at the latest version."
