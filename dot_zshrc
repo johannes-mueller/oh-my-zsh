@@ -120,3 +120,12 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=3
 
 source $ZSH/johmue.aliases.zsh
 alias git='nocorrect git'
+
+prepend_path() {
+    if [[  :$PATH: != *"$1"* ]] then
+       PATH=$1:$PATH
+    fi
+    export PATH
+}
+
+prepend_path ${HOME}/.local/bin
