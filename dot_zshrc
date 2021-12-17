@@ -62,16 +62,24 @@ ZSH_DISABLE_COMPFIX=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  archlinux
   cargo
+  cask
+  colorize
+  conda-zsh-completion
+  cp
   dirhistory
-  exa
   fd
+  fzf
   pass
   pip
   python
+  ripgrep
   rust
   sudo
   systemd
+  tmux
+  virtualenvwrapper
   z
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -83,21 +91,6 @@ zstyle ':completion::complete:*' use-cache 1
 zstyle ":conda_zsh_completion:*" use-groups true
 
 source $ZSH/oh-my-zsh.sh
-
-if [ `sed 's/^ID=//p;d' /etc/os-release` = arch ]
-then
-    source /usr/share/fzf/key-bindings.zsh
-    source /usr/share/fzf/completion.zsh
-else
-    source /usr/share/zsh/vendor-completions/_fzf
-    source /usr/share/doc/fzf/examples/key-bindings.zsh
-fi
-
-source $ZSH/fzf_options.zsh
-
-export FZF_COMPLETION_TRIGGER=''
-bindkey '^[t' fzf-completion
-bindkey '^I' $fzf_default_completion
 
 bindkey "^T" transpose-chars
 bindkey "^F" fzf-file-widget
@@ -135,4 +128,11 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=3
 source $ZSH/johmue.aliases.zsh
 alias git='nocorrect git'
 
+prepend_path() {
+    if [[  :$PATH: != *"$1"* ]] then
+       PATH=$1:$PATH
+    fi
+    export PATH
+}
 
+prepend_path ${HOME}/.local/bin
