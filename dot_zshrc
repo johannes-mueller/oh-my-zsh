@@ -57,6 +57,15 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Disable checking permissions of oh-my-zsh tree when sudoing
 ZSH_DISABLE_COMPFIX=true
 
+prepend_path() {
+    if [[  :$PATH: != *"$1"* ]] then
+       PATH=$1:$PATH
+    fi
+    export PATH
+}
+
+prepend_path ${HOME}/.local/bin
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -128,11 +137,3 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=3
 source $ZSH/johmue.aliases.zsh
 alias git='nocorrect git'
 
-prepend_path() {
-    if [[  :$PATH: != *"$1"* ]] then
-       PATH=$1:$PATH
-    fi
-    export PATH
-}
-
-prepend_path ${HOME}/.local/bin
