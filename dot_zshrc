@@ -79,6 +79,8 @@ plugins=(
   elixir_mix
   fd
   fzf
+  ng
+  npm
   pass
   pip
   python
