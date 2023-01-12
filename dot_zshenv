@@ -2,6 +2,7 @@ export VISUAL=vi
 export EDITOR=vi
 #export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS="-R -F -M -X $LESS"
+export LSP_USE_PLISTS=true
 
 if [ -e "$HOME/.zshenv.local" ] ; then
 	source "$HOME/.zshenv.local"
