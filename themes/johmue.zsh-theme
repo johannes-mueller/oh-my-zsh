@@ -8,7 +8,7 @@ rbenv_version() {
   rbenv version 2>/dev/null | awk '{print $1}'
 }
 
-PROMPT='
+PROMPT='${CONDA_ENV}
 %(?.${fg[green]}✔.${fg[red]}✘ [%?]) %{$fg[blue]%}${PWD/#$HOME/~}
 %{%(!.$fg_bold[red].$fg[green])%}%n@${HOST}%{$reset_color%}$(git_prompt_info) ⌚ \
 %{$fg[blue]%}%*%{$reset_color%} <%j> %(!.$fg_bold[red]#$reset_color.%%) '
@@ -27,4 +27,3 @@ else
     RPROMPT='%{$fg_bold[red]%}$(rbenv_version)%{$reset_color%}'
   fi
 fi
-

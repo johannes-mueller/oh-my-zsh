@@ -89,7 +89,6 @@ plugins=(
   sudo
   systemd
   tmux
-  virtualenvwrapper
   z
   zsh-autosuggestions
   zsh-syntax-highlighting
@@ -135,5 +134,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=3
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+source $ZSH/johmue.conda.zsh
 source $ZSH/johmue.aliases.zsh
 alias git='nocorrect git'
