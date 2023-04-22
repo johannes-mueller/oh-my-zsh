@@ -105,6 +105,16 @@ bindkey "^T" transpose-chars
 bindkey "^F" fzf-file-widget
 bindkey "^[f" fzf-cd-widget
 
+autoload -U up-line-or-beginning-search
+zle -N up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+bindkey -M emacs "${terminfo[kpp]}" up-line-or-beginning-search
+bindkey -M emacs "${terminfo[knp]}" down-line-or-beginning-search
+bindkey -M emacs "${terminfo[kcuu1]}" up-line-or-history
+bindkey -M emacs "${terminfo[kcud1]}" down-line-or-history
+
 # User configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=3
 # export MANPATH="/usr/local/man:$MANPATH"
