@@ -20,10 +20,21 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-if [ -e ~/.rvm/bin/rvm-prompt ]; then
-  RPROMPT='%{$fg_bold[red]%}‹$(rvm_current)›%{$reset_color%}'
-else
-  if which rbenv &> /dev/null; then
-    RPROMPT='%{$fg_bold[red]%}$(rbenv_version)%{$reset_color%}'
+RPROMPT_TEMPLATE="%(?.%{$fg[green]%}✔ .%{$fg[red]%}✘ [%?]) "
+
+function preexec() {
+  timer=$(($(date +%s%0N)/1000000))
+}
+
+function precmd() {
+  if [ $timer ]; then
+    now=$(($(date +%s%0N)/1000000))
+    elapsed=$(($now/1000-$timer/1000))
+
+    export RPROMPT=$RPROMPT_TEMPLATE
+    if [ $elapsed -gt 0 ] ; then \
+    	export RPROMPT="${RPROMPT}⌛ %{$fg[cyan]%}${elapsed}s%{$reset_color%}"
+    fi
+    unset timer
   fi
-fi
+}
