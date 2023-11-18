@@ -20,7 +20,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}!"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[green]%}?"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-RPROMPT_TEMPLATE="%(?.%{$fg[green]%}✔ .%{$fg[red]%}✘ [%?]) "
+RPROMPT_TEMPLATE="%(?.%{$fg[green]%}✔ .%{$fg[red]%}✘ [%?])%{$reset_color%} "
 
 function preexec() {
   timer=$(($(date +%s%0N)/1000000))
