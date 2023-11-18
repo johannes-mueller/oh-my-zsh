@@ -19,6 +19,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export GIT_ASKPASS=/usr/bin/ksshaskpass
+
 if [ -e "$HOME/.zshenv.local" ] ; then
 	source "$HOME/.zshenv.local"
 fi

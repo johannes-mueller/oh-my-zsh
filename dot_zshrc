@@ -71,7 +71,6 @@ prepend_path() {
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   archlinux
-  cask
   colorize
   conda-zsh-completion
   cp
@@ -93,6 +92,10 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
+
+if type cask &> /dev/null ; then
+    plugins+=cask
+fi
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
