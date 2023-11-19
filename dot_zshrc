@@ -78,6 +78,7 @@ plugins=(
   elixir_mix
   fd
   fzf
+  git-prompt
   ng
   npm
   pass

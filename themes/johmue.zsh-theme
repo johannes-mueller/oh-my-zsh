@@ -1,16 +1,8 @@
 # vim:ft=zsh ts=2 sw=2 sts=2
 
-rvm_current() {
-  rvm current 2>/dev/null
-}
-
-rbenv_version() {
-  rbenv version 2>/dev/null | awk '{print $1}'
-}
-
 PROMPT='${CONDA_ENV}
 %(?.${fg[green]}✔.${fg[red]}✘ [%?]) %{$fg[blue]%}${PWD/#$HOME/~}
-%{%(!.$fg_bold[red].$fg[green])%}%n@${HOST}%{$reset_color%}$(git_prompt_info) ⌚ \
+%{%(!.$fg_bold[red].$fg[green])%}%n@${HOST}%{$reset_color%}$(git_super_status) ⌚ \
 %{$fg[blue]%}%*%{$reset_color%} <%j> %(!.$fg_bold[red]#$reset_color.%%) '
 
 # Must use Powerline font, for \uE0A0 to render.
