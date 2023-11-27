@@ -83,7 +83,6 @@ plugins=(
   npm
   pass
   pip
-  pdm
   python
   ripgrep
   rust
@@ -97,6 +96,10 @@ plugins=(
 
 if type cask &> /dev/null ; then
     plugins+=cask
+fi
+
+if type pdm &> /dev/null ; then
+    plugins+=pdm
 fi
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
