@@ -6,6 +6,8 @@ export LSP_USE_PLISTS=true
 
 export GIT_ASKPASS=/usr/bin/ksshaskpass
 
+export MOZ_ENABLE_WAYLAND=1
+
 if [ -e "$HOME/.zshenv.local" ] ; then
 	source "$HOME/.zshenv.local"
 fi
