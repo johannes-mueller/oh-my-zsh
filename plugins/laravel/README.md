@@ -8,6 +8,7 @@ plugins=(... laravel)
 |:-:|:-:|
 | `artisan`  | `php artisan`  |
 | `pas`  | `php artisan serve` |
+| `pats`  | `php artisan test` |
 
 ## Database
 
