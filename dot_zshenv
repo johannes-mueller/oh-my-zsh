@@ -11,3 +11,5 @@ export MOZ_ENABLE_WAYLAND=1
 if [ -e "$HOME/.zshenv.local" ] ; then
 	source "$HOME/.zshenv.local"
 fi
+
+zstyle ":conda_zsh_completion:*" show-unnamed true
