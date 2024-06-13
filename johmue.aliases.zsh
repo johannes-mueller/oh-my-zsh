@@ -52,3 +52,6 @@ alias gl='git glog'
 alias gd='git diff'
 
 alias gitus='LANG=en_US.UTF-8 git'
+
+alias eza='eza --icons=always --git --color=always'
+alias watch='watch --color'
