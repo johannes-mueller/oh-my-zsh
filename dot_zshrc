@@ -109,6 +109,11 @@ zstyle ':completion::complete:*' use-cache 1
 zstyle ":conda_zsh_completion:*" use-groups true
 
 zstyle ':fzf-tab:*' default-color $'\033[29m'
+zstyle ':fzf-tab:*' fzf-flags --color=hl:12
+
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
+  --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
 
 source $ZSH/oh-my-zsh.sh
 
