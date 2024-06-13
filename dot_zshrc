@@ -78,6 +78,7 @@ plugins=(
   elixir_mix
   fd
   fzf
+  fzf-tab
   git-prompt
   ng
   npm
@@ -106,6 +107,8 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 zstyle ':completion::complete:*' use-cache 1
 zstyle ":conda_zsh_completion:*" use-groups true
+
+zstyle ':fzf-tab:*' default-color $'\033[29m'
 
 source $ZSH/oh-my-zsh.sh
 
