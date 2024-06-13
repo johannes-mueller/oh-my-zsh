@@ -160,3 +160,5 @@ if [[ -d ~/.miniconda3 ]] ; then
 fi
 source $ZSH/johmue.aliases.zsh
 alias git='nocorrect git'
+
+eval $(thefuck --alias)
