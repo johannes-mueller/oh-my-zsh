@@ -8,6 +8,8 @@ export GIT_ASKPASS=/usr/bin/ksshaskpass
 
 export MOZ_ENABLE_WAYLAND=1
 
+export BAT_THEME=GitHub
+
 if [ -e "$HOME/.zshenv.local" ] ; then
 	source "$HOME/.zshenv.local"
 fi
