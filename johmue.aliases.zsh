@@ -54,4 +54,7 @@ alias gd='git diff'
 alias gitus='LANG=en_US.UTF-8 git'
 
 alias eza='eza --icons=always --git --color=always'
+alias lz='eza'
 alias watch='watch --color'
+alias cat=bat
+alias em='emacsclient -nw'
