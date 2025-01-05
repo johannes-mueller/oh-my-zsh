@@ -76,7 +76,6 @@ plugins=(
   cp
   dirhistory
   elixir_mix
-  fd
   fzf
   fzf-tab
   git-prompt
@@ -86,7 +85,6 @@ plugins=(
   pdm
   pip
   python
-  ripgrep
   rust
   sudo
   systemd
