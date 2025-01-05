@@ -83,6 +83,7 @@ plugins=(
   ng
   npm
   pass
+  pdm
   pip
   python
   ripgrep
@@ -90,6 +91,7 @@ plugins=(
   sudo
   systemd
   tmux
+  uv
   z
   zsh-autosuggestions
   zsh-syntax-highlighting
