@@ -82,7 +82,6 @@ plugins=(
   ng
   npm
   pass
-  pdm
   pip
   python
   rust
@@ -112,10 +111,11 @@ zstyle ':fzf-tab:*' default-color $'\033[29m'
 zstyle ':fzf-tab:*' fzf-flags --color=hl:12
 
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath' # remember to use single quote here!!!
+zstyle ':fzf-tab:*' fzf-min-height 10
 
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
-  --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
+  --border="rounded" --preview-window="border-rounded" --prompt="> "
+  --marker=">" --pointer="◆"'
 
 source $ZSH/oh-my-zsh.sh
 
@@ -162,9 +162,12 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=fg=3
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [[ -d ~/.miniconda3 ]] ; then
-   source $ZSH/johmue.conda.zsh
-fi
+# if [[ -d ~/.miniconda3 ]] ; then
+#    source $ZSH/johmue.conda.zsh
+# fi
+
+source $ZSH/johmue.uv.zsh
+
 source $ZSH/johmue.aliases.zsh
 alias git='nocorrect git'
 
