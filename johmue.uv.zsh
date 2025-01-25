@@ -5,7 +5,7 @@ activate_local_uv_env() {
     fi
 }
 
-source $HOME/.miniconda3/bin/activate
+source $HOME/.pyenvs/base/bin/activate
 
 activate_local_uv_env
 
