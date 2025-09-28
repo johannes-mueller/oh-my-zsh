@@ -72,12 +72,9 @@ prepend_path() {
 plugins=(
   archlinux
   colorize
-  conda-zsh-completion
   cp
   dirhistory
-  elixir_mix
   fzf
-  fzf-tab
   git-prompt
   ng
   npm
@@ -90,17 +87,9 @@ plugins=(
   tmux
   uv
   z
-  zsh-autosuggestions
-  zsh-syntax-highlighting
 )
 
-if type cask &> /dev/null ; then
-    plugins+=cask
-fi
-
-if type pdm &> /dev/null ; then
-    plugins+=pdm
-fi
+plugins+=($(ls ${ZSH}/custom/plugins))
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
