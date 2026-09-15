@@ -8,6 +8,7 @@ plugins=(... laravel)
 |:-:|:-:|
 | `artisan`  | `php artisan`  |
 | `pas`  | `php artisan serve` |
+| `pad`  | `php artisan dev` |
 | `pats`  | `php artisan test` |
 
 ## Database
@@ -39,6 +40,8 @@ plugins=(... laravel)
 | `pamen` | `php artisan make:enum` |
 | `pami`  | `php artisan make:interface` |
 | `pamtr` | `php artisan make:trait` |
+| `pamv` | `php artisan make:view` |
+| `pammig` | `php artisan make:migration` |
 
 ## Clears
 
